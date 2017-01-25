@@ -1,58 +1,60 @@
 <!doctype html>
 <html lang="pt-br" data-theme="{{ settings.extension_id }}" data-store="{{ store.id }}" class="page-{{ pages.current }}">
-<head>
 
-    <!-- tray charset -->
-    {{ html.charset() }}
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
 
-    <!-- tray meta tags -->
-    {{ tray.meta }}
+        <!-- tray charset -->
+        {{ html.charset() }}
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- tray styles -->
-    {{ tray.styles }}
+        <!-- tray meta tags -->
+        {{ tray.meta }}
 
-    <!-- theme styles -->
-    <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/custom.css', {dynamic: true}) }}" type="text/css">
-    <link rel="stylesheet" href="{{ asset('css/dev.css') }}" type="text/css">
+        <!-- tray styles -->
+        {{ tray.styles }}
 
+        <!-- theme styles -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/theme.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/custom.css', {dynamic: true}) }}" type="text/css">
 
-    <style>
-        {{ settings.custom_css }}
-    </style>
+        <link rel="stylesheet" href="{{ asset('css/elements/header.css') }}" type="text/css">
 
-    <!-- tray scripts -->
-    {{ tray.scripts }}
+        <link rel="stylesheet" href="{{ asset('css/fontAwesome/font-awesome.min.css') }}" type="text/css">
+        <link rel="stylesheet" href="{{ asset('css/dev.css') }}" type="text/css">
 
-    <!-- tray analytics -->
-    {{ tray.analytics }}
+        <style>
+            {{ settings.custom_css }}
+        </style>
 
-    <!-- google tag manager -->
-    {{ googleTagManager.header(pages.current, tagManagerData) }}
-</head>
-<body>
-    {% spaceless %}
-    {{ googleTagManager.top(pages.current, tagManagerData) }}
+        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
 
-    {% element 'snippets/messages' %}
+        <!-- tray scripts -->
+        {{ tray.scripts }}
 
-    {% element 'snippets/menu-mobile' %}
+        <!-- tray analytics -->
+        {{ tray.analytics }}
 
-    <div class="application">
+        <!-- google tag manager -->
+        {{ googleTagManager.header(pages.current, tagManagerData) }}
+    </head>
+    <body>
+        {% spaceless %}
+        {{ googleTagManager.top(pages.current, tagManagerData) }}
 
-        {% element 'header' %}
+        <div class="application">
 
-        <main class="site-main container">
-            <div class="row">
+            {% element 'header' %}
 
-                {% if "central" in pages.current %}
-                    {%  element 'sidebar-central' %}
-                {% else %}
-                    {%  element 'sidebar-left' %}
+            <main class="site-main container">
+                <div class="row">
+
+                    {% if "central" in pages.current %}
+                        {%  element 'sidebar-central' %}
+                    {% else %}
+                        {%  element 'sidebar-left' %}
                 {% endif %}
 
                 <section class="page-content col-sm-9">

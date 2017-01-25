@@ -1,46 +1,66 @@
 <header>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-3 col-xs-12">
-                <a href="{{ links.home }}" class="site-logo" data-tray-tst="logotipo_loja">
-                    {{ Image('logo') }}
-                </a>
-            </div>
-            
-            
-            <div class="col-sm-9 col-xs-12">
-                {% element 'snippets/customer' %}
-                <div class="row">
-                    {% if settings.structure == 1 %}
-                    <div class="col-md-9 col-sm-8 hidden-xs">
-                    {% elseif settings.structure == 2 %}
-                    <div class="col-md-8 col-sm-8 hidden-xs">
-                    {% endif %}    
-                        {% element 'snippets/search' %}
-                    </div>
-                    
-                    {% if settings.structure == 1 %}
-                    <div class="col-md-3 col-sm-4 hidden-xs">
-                    {% elseif settings.structure == 2 %}
-                    <div class="col-md-4 col-sm-4 hidden-xs">
-                    {% endif %} 
-                        {% element 'snippets/cart' %}
+    <div class="header_top">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <div class="contactinfo">
+                        <ul class="nav nav-pills">
+                            <li ><a href="#" style="line-height: 22px"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
+                            <li><a href="#" style="line-height: 22px"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+                        </ul>
                     </div>
                 </div>
-            </div>
-            <div class="wrapper-nav clearfix visible-xs-block">
-                <div class="col-xs-2">
-                    <button class="trigger-menu">
-                        <img src="{{ asset('img/menu.svg') }}" alt="Menu">
-                    </button>
-                </div>
-                <div class="col-xs-8">
-                    {% element 'snippets/search' %}
-                </div>
-                <div class="col-xs-2 wrapp-cart">
-                    {% element 'snippets/cart' %}
+                <div class="col-sm-6">
+                    <div class="social-icons pull-right">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</header>
+    <div class="header_logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">   
+                    <div class="areaLogo">
+                        <img src='{{themePath}}img/header/logo.png'/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <ul class="nav navbar-nav" style="float: right">
+                        <li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+                        <li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
+                        <li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
+                        <li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+                        <li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+                    </ul>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header_links">
+        <div class="container">
+            <div class="row">
+                <div class="mainmenu pull-left">
+                    <ul class="nav navbar-nav collapse navbar-collapse">
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li class="dropdown"><a href="#">Shop</a>
+                           
+                        </li> 
+                        <li class="dropdown"><a href="#">Blog</a>
+                            
+                        </li> 
+                        <li><a href="404.html">404</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header> 
