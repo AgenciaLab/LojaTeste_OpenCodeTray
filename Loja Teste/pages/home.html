@@ -18,7 +18,7 @@
 {% endif %}
 
 {% if settings.showcase == "top_seller" %}
-    <div id="prognoos_popv1"></div>	
+    <div id="prognoos_popv1"></div>
     {% set products = Products({
         'filter': 'available',
         'limit': limitProducts,
@@ -45,9 +45,9 @@
         {{ banner.extra1 }}
     </div>
 {% endif %}
-                    
 
-{% element 'showcase' { 
+
+{% element 'showcase' {
     "products": products,
     "showcaseTitle": showcaseText
 } %}

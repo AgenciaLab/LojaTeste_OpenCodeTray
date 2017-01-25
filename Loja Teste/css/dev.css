@@ -1,0 +1,26 @@
+.trigger-menu, .menu-mobile, .search .search-button, .cart .cart-icon, .newsletter form button, .store-rating .dep_link a, .foo-rating .dep_link a, .sidebar .main-menu .level2, .sidebar .main-menu .level3, .sidebar .main-menu .item-level1:hover, .sidebar .main-menu .item-level2:hover, .sidebar .main-menu .item-level3:hover, .box_skitter .info_slide .image_number_select, .box_skitter .info_slide .image_number_select:hover, .page-register #CadastroAbas .aberta a, .page-catalog .button-compare, .page-search .button-compare, .page-product #cepbox .botao-simular-frete, .page-product .products-visited .myNavigation, .page-product .products-visited .clearVisiteds, .page-product .products-visited .paginacao_ajax_prod #linksPag .pageON, .page-product .product-gallery .slider-nav .slick-arrow, .page-product .product-cross-sell .fotosCompreJunto .plus:after, .page-product .product-cross-sell .fotosCompreJunto .plus:before, .page-product .product-quantity>div>span, .page-product #bloco-add-lista a, .page-product .botao_tire_duvidas, .page-product .product-tabs #ProdAbas li, html .botao-commerce, html .botao-commerce:hover, html .botao-commerce:link {
+	background-color: #cdcdcd;
+}
+.sidebar .main-menu .item-level1:hover a {
+	color: #f1f1f1;
+}
+
+.item-level1 .link-level1:hover {
+	background-color: #cdcdcd;
+}
+
+.sidebar .main-menu .level2 {
+	background-color: #cdcdcd;
+}
+
+.sidebar .main-menu>h3 {
+	color: #FE980F;
+}
+.categoryMenu {
+    font-family: 'Roboto', sans-serif;
+    margin: 10px auto 0;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 3;
+}
